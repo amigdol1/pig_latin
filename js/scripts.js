@@ -1,27 +1,40 @@
-// business logic
-var leapYear = function(year) {
-  if ((year % 4 === 0) && (year % 100 !== 0) || ( year % 400 === 0)) {
-    return true;
-  } else {
-    return false;
-  }
-};
+// // business logic
+ // var vowels = ['a', 'e', 'i', 'o', 'u'];
+// var qu = 'qu';
+ var space = ' ';
+// var comma = ', ';
 
 // user interface logic
+var pigLatin = (function(word) {
+if (word.charAt(0) === "a"|| word.charAt(0) === "e"|| word.charAt(0) === "i"|| word.charAt(0) === "o"|| word.charAt(0) === "u") {
+  return word + "ay";
+  }
+  else if (word.charAt(0) !== "a"|| word.charAt(0) !== "e"|| word.charAt(0) !== "i"|| word.charAt(0) !== "o"|| word.charAt(0) !== "u")
+{
+  var remove = word.slice(1);
+return remove + word.charAt(0) + "ay";
+}
+
+});
+
 $(document).ready(function() {
-  $("form#leap-year").submit(function(event) {
+  $("form#pig-latin").submit(function(event) {
     event.preventDefault();
-    var year = parseInt($("input#year").val());
-    var result = leapYear(year);
+    var word = ($("input#sentence").val());
+    pigLatin(word);
 
-    $(".year").text(year);
 
-    if (!result) {
-      $(".not").text("not");
-    } else {
-      $(".not").text("");
-    }
 
-    $("#result").show();
+     console.log(pigLatin(word));
   });
 });
+
+
+
+
+
+
+
+//create a loop that contains a forEach function that calls on the character at method for each word [var string, forEach, var res = str.charAt(0); #vowels #oneatatime]
+
+//create if, else if for vowels, qu, and "squ" logic. else will be constants and "y".

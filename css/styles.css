@@ -1,3 +1,19 @@
 #result {
   display: none;
 }
+
+body {
+  background-color: #529BD8;
+}
+
+button {
+  background-color:#A8CFF0;
+}
+
+h1 {
+  color: #A8CFF0;
+}
+
+label {
+  color: #A8CFF0;
+}

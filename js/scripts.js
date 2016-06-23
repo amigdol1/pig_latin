@@ -12,7 +12,12 @@ if (word.charAt(0) === "a"|| word.charAt(0) === "e"|| word.charAt(0) === "i"|| w
   else if (word.charAt(0) !== "a"|| word.charAt(0) !== "e"|| word.charAt(0) !== "i"|| word.charAt(0) !== "o"|| word.charAt(0) !== "u")
 {
   var remove = word.slice(1);
-return remove + word.charAt(0) + "ay";
+  return remove + word.charAt(0) + "ay";
+}
+else if (word.charAt(0) !== "a"|| word.charAt(0) !== "e"|| word.charAt(0) !== "i"|| word.charAt(0) !== "o"|| word.charAt(0) !== "u")
+{
+var remove = word.slice(2);
+return remove + word.charAt(0) + word.charAt() + "ay";
 }
 
 });
